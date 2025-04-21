@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'dashboard',
     loadChildren: () =>
       import('./admin/admin-dashboard/admin-dashboard.module').then((m) => m.AdminDashboardModule),
   },
@@ -28,7 +28,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./admin/admin-transaction/admin-transaction.module').then((m) => m.AdminTransactionModule),
   },
-  // { path: '**', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: 'dashboard', pathMatch: 'full' },
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full', 
+  },
 
 ];
 

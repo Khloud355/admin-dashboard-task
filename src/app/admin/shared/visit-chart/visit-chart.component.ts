@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { VisitChart } from '../../admin-dashboard/models/visit-chat-model';
 
@@ -15,14 +15,8 @@ import { VisitChart } from '../../admin-dashboard/models/visit-chat-model';
 
 
 
-export class VisitChartComponent implements OnChanges {
+export class VisitChartComponent  {
  @Input() data:VisitChart[] =[]
-
-ngOnChanges(): void {
-  
-  console.log(this.data,"data")
-}
-
 
 }
 

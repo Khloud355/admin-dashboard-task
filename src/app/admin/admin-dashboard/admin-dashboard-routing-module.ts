@@ -3,13 +3,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 
 export const dashboardRoutes: Routes = [
-  {
-    path: '',
-    children: [
-      { path: 'dashboard', component: DashboardComponent },
-    
-    ]
-  }
+  
+    { path: '', component: DashboardComponent },
+  
 ]
 
 @NgModule({

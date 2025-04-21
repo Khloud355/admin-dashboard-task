@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { AnalyticCardData } from '../models/analytic-modal';
-import { catchError, delay, finalize, Observable, of } from 'rxjs';
+import { catchError, delay, Observable, of } from 'rxjs';
 import { ANALYTIC_CARDS } from '../_mock/analytic-card.mock';
 import { OrderItem } from '../models/order-item-model';
 import { mockOrders } from '../_mock/order-item-mock';
 import { VisitChartData } from '../_mock/visit-chart-mock';
 import { VisitChart } from '../models/visit-chat-model';
-
 import { ReportChartData } from '../_mock/report-chart-mock';
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class AdminDashboardService {
 
 

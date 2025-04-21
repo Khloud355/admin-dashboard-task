@@ -12,12 +12,7 @@ import { MatTableModule } from '@angular/material/table';
 import { OrderItem } from '../../admin-dashboard/models/order-item-model';
 import { Router } from '@angular/router';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
+
 @Component({
   selector: 'app-orders-table',
   standalone: true,
@@ -30,12 +25,12 @@ export class OrdersTableComponent implements AfterViewInit, OnChanges {
 constructor(public router: Router) {}
 
   @Input() orderTableData: OrderItem[] = [];
-
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
   displayedColumns: string[] = ['Name', 'Qty', 'Order', 'Amount', 'Status'];
   dataSource = new MatTableDataSource<OrderItem>();
   clickedRows = new Set<OrderItem>();
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -43,7 +38,6 @@ constructor(public router: Router) {}
 
   ngOnChanges(): void {
     this.dataSource.data = this.orderTableData;
-
     if (this.paginator) {
       this.dataSource.paginator = this.paginator;
     }

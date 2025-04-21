@@ -68,23 +68,25 @@ export class DashboardComponent implements OnInit {
 
   getAnalyticsData() {
     this.loadingService.setLoadingState(true);
-    this.adminDashboardService.getAnalyticsCardData().subscribe((res) => {
-      this.analyticsData = res.map((item, index) => {
-        const additional = this.analyticCardTitles[index] || {};
-        return {
-          ...item,
-          name: additional.name || '',
-          image: additional.image || '',
-        };
-      });
-    },
-    (error) => {
-      this.errorMessage = 'An error occurred while fetching orders.';
-      console.error(error);
-    },
-    () => {
-      this.loadingService.setLoadingState(false);
-    });
+    this.adminDashboardService.getAnalyticsCardData().subscribe(
+      (res) => {
+        this.analyticsData = res.map((item, index) => {
+          const additional = this.analyticCardTitles[index] || {};
+          return {
+            ...item,
+            name: additional.name || '',
+            image: additional.image || '',
+          };
+        });
+      },
+      (error) => {
+        this.errorMessage = 'An error occurred while fetching orders.';
+        console.error(error);
+      },
+      () => {
+        this.loadingService.setLoadingState(false);
+      }
+    );
   }
 
   getOrders() {
@@ -105,31 +107,35 @@ export class DashboardComponent implements OnInit {
 
   getVisitChartData(item: any) {
     this.loadingService.setLoadingState(true);
-    this.adminDashboardService.getVisitsData(item).subscribe((res) => {
-      this.chartVisitData = res;
-      console.log(this.chartVisitData);
-    },
-    (error) => {
-      this.errorMessage = 'An error occurred while fetching orders.';
-      console.error(error);
-    },
-    () => {
-      this.loadingService.setLoadingState(false);
-    });
+    this.adminDashboardService.getVisitsData(item).subscribe(
+      (res) => {
+        this.chartVisitData = res;
+        console.log(this.chartVisitData);
+      },
+      (error) => {
+        this.errorMessage = 'An error occurred while fetching orders.';
+        console.error(error);
+      },
+      () => {
+        this.loadingService.setLoadingState(false);
+      }
+    );
   }
 
   getReportedChartData(item: any) {
     this.loadingService.setLoadingState(true);
-    this.adminDashboardService.getReportedData(item).subscribe((res) => {
-      this.chartReportedData = this.transformData(res);
-    },
-    (error) => {
-      this.errorMessage = 'An error occurred while fetching orders.';
-      console.error(error);
-    },
-    () => {
-      this.loadingService.setLoadingState(false);
-    });
+    this.adminDashboardService.getReportedData(item).subscribe(
+      (res) => {
+        this.chartReportedData = this.transformData(res);
+      },
+      (error) => {
+        this.errorMessage = 'An error occurred while fetching orders.';
+        console.error(error);
+      },
+      () => {
+        this.loadingService.setLoadingState(false);
+      }
+    );
   }
 
   transformData(data: { name: string; value: number }[]): any[] {

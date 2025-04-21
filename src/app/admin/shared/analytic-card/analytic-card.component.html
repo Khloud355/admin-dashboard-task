@@ -8,7 +8,11 @@
       <div class="analytics-card__value">{{ analyticsCardData?.value }}</div>
       <span
         *ngIf="analyticsCardData?.percentage"
-        [ngClass]="analyticsCardData?.percentage?.positive ? 'analytics-card__percentage positive' : 'analytics-card__percentage negative'"
+        [ngClass]="
+          analyticsCardData?.percentage?.positive
+            ? 'analytics-card__percentage positive'
+            : 'analytics-card__percentage negative'
+        "
       >
         {{ analyticsCardData?.percentage?.amount }}%
       </span>
