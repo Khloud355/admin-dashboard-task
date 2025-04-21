@@ -27,19 +27,32 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-libraries that i use 
-ngxcharts
-angular matrial 
-bootstrap
-i was makw responsive but i didn't have time 
-i make all things in ui with functionalty
-make lazy-loading routing for module
-make service to handle bussiness logic and handle apis call and share data
-make interceptor to handle loading state
-make mock data to simulates backend
-make routing between components
-make charts that i used ngxchart and make functionalty 
-make table and pagination
-make interfaces to handle var typing
-make standalone shared components to make components reusable and easy 
+Libraries Used:
+ngx-charts for creating charts.
 
+Angular Material for UI components.
+
+Bootstrap for responsive design and layout.
+
+Completed Tasks:
+Worked on making the UI responsive (although not finished due to time constraints).
+
+Implemented functionality for the UI.
+
+Set up lazy-loading routing for modules.
+
+Created a service to handle business logic, API calls, and data sharing.
+
+Implemented an interceptor to manage the loading state.
+
+Used mock data to simulate backend behavior.
+
+Set up routing between components.
+
+Created charts using ngx-charts and implemented the required functionality.
+
+Developed a table with pagination.
+
+Defined interfaces to handle variable typing and ensure type safety.
+
+Created standalone shared components to promote reusability and ease of enhancement.
