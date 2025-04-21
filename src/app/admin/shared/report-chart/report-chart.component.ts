@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { Color, NgxChartsModule, ScaleType } from '@swimlane/ngx-charts';
-import * as d3 from 'd3';
 
 @Component({
   selector: 'app-report-chart',
@@ -25,8 +24,6 @@ export class ReportChartComponent implements AfterViewInit {
     if (value === 0) return '0';
     return `$${value/1000}k`;
   }
-
-  curveLinear = d3.curveLinear;
 
   @ViewChild('chartContainer', { static: true }) chartContainer!: ElementRef;
 

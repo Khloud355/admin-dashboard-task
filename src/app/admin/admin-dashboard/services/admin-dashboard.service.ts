@@ -26,8 +26,6 @@ export class AdminDashboardService {
   }
 
   getOrdersData(): Observable<OrderItem[]> {
-  
-
     return of(mockOrders).pipe(
       delay(2000),
       catchError(error => {
