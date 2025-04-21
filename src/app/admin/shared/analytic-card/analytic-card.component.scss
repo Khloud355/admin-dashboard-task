@@ -1,0 +1,55 @@
+.analytics-card {
+    background-color: #fff;
+    border-radius: 17px;
+    padding: 34px 17px;
+    display: flex;
+    gap: 13px;
+
+    .analytics-card__image {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #e3f6ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .analytics-card__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .analytics-card__title {
+            color: #93a3ab;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .analytics-card__value-group {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            .analytics-card__value {
+                color: #000000;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .positive {
+                color: #65c565;
+                background-color: #e3f4e3;
+            }
+            .negative {
+                color: #c56565;
+                background-color: #f4e3e3;
+            }
+            .analytics-card__percentage {
+                font-size: 11.58px;
+                font-weight: 600;
+                border-radius: 20px;
+                padding: 0 12px;
+            }
+        }
+    }
+}

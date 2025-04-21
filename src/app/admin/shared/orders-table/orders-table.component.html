@@ -1,0 +1,65 @@
+<div>
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    class="mat-elevation-z8 demo-table"
+  >
+    <!-- Position Column -->
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef>Item Name</th>
+
+      <td mat-cell *matCellDef="let element" class="table-basic-style">
+        <img width="37" height="37" [src]="element.image" alt="" />
+        {{ element.name }}
+      </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Qty">
+      <th mat-header-cell *matHeaderCellDef>Qty</th>
+      <td mat-cell *matCellDef="let element" class="table-basic-style">
+        {{ element.qty }}
+      </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Order">
+      <th mat-header-cell *matHeaderCellDef>Order Date</th>
+      <td mat-cell *matCellDef="let element" class="date-badge">
+        {{ element.orderDate }}
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Amount">
+      <th mat-header-cell *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let element" class="table-basic-style">
+        {{ element.amount | currency }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="Status">
+      <th mat-header-cell *matHeaderCellDef>status</th>
+      <td
+        mat-cell
+        *matCellDef="let element"
+        class="status-badge"
+        [ngClass]="{
+          'pending-status': element.status === 'Pending',
+          'approved-status': element.status === 'Approved',
+          'in-process-status': element.status === 'In Process'
+        }"
+      >
+        {{ element.status }}
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      (click)="router.navigate(['/orders/details', row.id])"
+      [class.demo-row-is-clicked]="clickedRows.has(row)"
+      *matRowDef="let row; columns: displayedColumns"
+    ></tr>
+  </table>
+
+  <mat-paginator [pageSize]="3" [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+</div>

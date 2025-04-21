@@ -1,0 +1,46 @@
+
+::ng-deep g.y.axis g.tick text {
+  font-size: 12px !important;
+  fill: #ADB1B2 !important;
+  font-weight: 500;
+}
+
+::ng-deep g.x.axis g.tick text {
+  fill: #575C5F !important; 
+  font-size: 11px !important; 
+}
+::ng-deep g.chart g.area path {
+  fill: url(#gradient-fill) !important;
+  opacity: 1 !important;
+}
+
+::ng-deep g.line-series path.line {
+  stroke-width: 3px !important;
+}
+.revenue-line-chart {
+  width: 100%;
+  height:300px; 
+
+  
+  ::ng-deep {
+    .line-chart {
+      .line {
+        stroke-width: 2.5px !important;
+      }
+      
+      .tick text {
+     
+      }
+      
+      .gridline-path {
+        stroke: #eee !important;
+        stroke-width: 1px !important;
+      }
+      
+      .y.axis .tick:nth-child(1) text {
+  
+        fill: #666 !important;
+      }
+    }
+  }
+}

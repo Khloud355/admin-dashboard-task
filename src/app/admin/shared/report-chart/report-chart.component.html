@@ -1,0 +1,22 @@
+<div class="revenue-line-chart"  #chartContainer>
+  <ngx-charts-line-chart
+  [results]="reportedData"
+  [scheme]="colorScheme"
+  [xAxis]="true"
+  [yAxis]="true"
+  [legend]="false"
+  [showXAxisLabel]="false"
+  [showYAxisLabel]="false"
+  [autoScale]="true"
+  [yScaleMax]="100000"
+  [yAxisTicks]="[0, 20000, 50000, 70000, 100000]"
+  [yAxisTickFormatting]="formatYAxis"
+  [showGridLines]="true"
+  [roundDomains]="false"
+  [curve]="curveLinear"
+  [gradient]="true"
+
+>
+</ngx-charts-line-chart>
+
+</div>

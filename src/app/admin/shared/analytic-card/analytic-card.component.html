@@ -1,0 +1,17 @@
+<div class="analytics-card">
+  <div class="analytics-card__image">
+    <img [src]="analyticsCardData?.image" alt="total-rev" />
+  </div>
+  <div class="analytics-card__content">
+    <div class="analytics-card__title">{{ analyticsCardData?.name }}</div>
+    <div class="analytics-card__value-group">
+      <div class="analytics-card__value">{{ analyticsCardData?.value }}</div>
+      <span
+        *ngIf="analyticsCardData?.percentage"
+        [ngClass]="analyticsCardData?.percentage?.positive ? 'analytics-card__percentage positive' : 'analytics-card__percentage negative'"
+      >
+        {{ analyticsCardData?.percentage?.amount }}%
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,130 @@
+<!-- <div class="container"> -->
+<div class="sidebar-container">
+  <div class="sidebar-logo">
+    <div class="logo">
+      <img
+        src="../../../assets/admin-dashoard-images/admin-logo.svg"
+        alt="logo"
+      />
+    </div>
+    <span for=""> Manager <span class="highlight-pro">Pro</span></span>
+  </div>
+  <!-- <div class="sidebar-links"> -->
+  <ul class="sidebar-list">
+    <div class="aggregated">
+      <li
+        class="sidebar-link"
+        routerLink="/dashboard"
+        routerLinkActive="siadebar-active-link"
+      >
+        <img
+          class="sidebar-link-icon"
+          src="../../../assets/admin-dashoard-images/dashboard.svg"
+          alt="sidebar-icon"
+        />
+        <span>Dashboard</span>
+      </li>
+      <li
+        class="sidebar-link"
+        routerLink="/orders"
+        routerLinkActive="siadebar-active-link"
+      >
+        <img
+          routerLinkActive="active"
+          class="sidebar-link-icon"
+          src="../../../assets/admin-dashoard-images/orders.svg"
+          alt="sidebar-icon"
+        />
+        <span>Orders</span>
+      </li>
+      <li
+        class="sidebar-link"
+        routerLink="/users"
+        routerLinkActive="siadebar-active-link"
+      >
+        <img
+          class="sidebar-link-icon"
+          src="../../../assets/admin-dashoard-images/users.svg"
+          alt="sidebar-icon"
+        />
+        <span>Users</span>
+      </li>
+
+      <li
+        class="sidebar-link"
+        routerLink="/items"
+        routerLinkActive="siadebar-active-link"
+      >
+        <img
+          class="sidebar-link-icon"
+          src="../../../assets/admin-dashoard-images/items.svg"
+          alt="sidebar-icon"
+        />
+        <span>Items</span>
+      </li>
+      <li
+        class="sidebar-link"
+        routerLink="/transaction"
+        routerLinkActive="siadebar-active-link"
+      >
+        <img
+          class="sidebar-link-icon"
+          src="../../../assets/admin-dashoard-images/transactions.svg"
+          alt="sidebar-icon"
+        />
+        <span>Tranactions</span>
+      </li>
+      <li
+        class="sidebar-link"
+        routerLink="/reports"
+        routerLinkActive="siadebar-active-link"
+      >
+        <img
+          class="sidebar-link-icon"
+          src="../../../assets/admin-dashoard-images/reports.svg"
+          alt="sidebar-icon"
+        />
+        <span>Reports</span>
+      </li>
+    </div>
+
+    <li
+      class="sidebar-link notified-link"
+
+    >
+      <img
+        class="sidebar-link-icon "
+        src="../../../../assets/admin-dashoard-images/message.svg"
+        alt="sidebar-icon"
+      />
+   <div class="d-flex w-100 justify-content-between align-items-center">
+    <span [ngStyle]="{ 'color': isNotifcation ? '#000000' : '#aeb9be' }">Messages</span>
+      <span *ngIf="isNotifcation" class="notifacation-badge"></span>
+    </div>
+    </li>
+    <li
+      class="sidebar-link"
+
+    >
+      <img
+        class="sidebar-link-icon"
+        src="../../../../assets/admin-dashoard-images/support.svg"
+        alt="sidebar-icon"
+      />
+      <span>Support</span>
+    </li>
+    <li
+      class="sidebar-link"
+
+    >
+      <img
+        class="sidebar-link-icon"
+        src="../../../../assets/admin-dashoard-images/setting.svg"
+        alt="sidebar-icon"
+      />
+      <span>Settings</span>
+    </li>
+  </ul>
+</div>
+<!-- </div> -->
+<!-- </div> -->

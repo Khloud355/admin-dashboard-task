@@ -1,0 +1,71 @@
+.mat-header-cell,
+.mat-cell {
+    border-bottom: 1px solid red;
+}
+
+ 
+
+    .demo-table {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 17px;
+        .mat-mdc-header-row {
+            color: #a6a9aa;
+            font-size: 13px;
+            font-weight: 400;
+            background-color: #f7f9fa !important;
+            border-radius: 4px;
+            border-bottom: unset;
+            padding: 10px;
+            .mat-mdc-header-cell {
+                border-bottom: unset;
+            }
+        }
+        .table-basic-style{
+            font-size: 14px;
+            font-weight: 500;
+            color: #000000;
+        }
+        .date-badge{
+            color: #A7AEB1;
+            font-size: 14px;
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 10%;
+            font-weight: 500;
+            font-size: 9px;
+            display: inline-block;
+            text-align: center;
+            min-width: 80px;
+            margin-top: 18px;
+          }
+        .pending-status {
+            background-color: #dff0ff;
+            color: #0561fc;
+        }
+        .approved-status{
+            color: #78C278;
+            background-color: #E6FDE6;
+        }
+        .in-process-status{
+            color: #FAA86D;
+            background-color: #FFF4DF;
+        }
+    }
+
+    .mat-mdc-row .mat-mdc-cell {
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        cursor: pointer;
+    }
+
+
+
+    .demo-row-is-clicked {
+        font-weight: bold;
+    }
+
+::ng-deep .mat-elevation-z8 {
+    box-shadow:unset !important
+}
